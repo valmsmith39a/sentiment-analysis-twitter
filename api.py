@@ -15,7 +15,7 @@ sample_stock_info = {
 def home():
     return '''<h1>Stock Data</h1>'''
 
-@app.route('/stocks/single/data/all', methods=['GET'])
-def stock_info():
+@app.route('/stocks/single/<id>/data/all', methods=['GET'])
+def stock_info(id):
     return jsonify(sample_stock_info)
 app.run()
